@@ -14,3 +14,4 @@ Pre-requiste before we start
 3. Create virtual environment
 4. Activate the virtual environment
 5. pip install all the packages needed (Django, selenium, pytest)
+6. 

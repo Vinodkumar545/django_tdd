@@ -2,3 +2,5 @@
 venv_dj_tdd
 .pytest_cache
 __pycache__
+practice.py
+db.sqlite3

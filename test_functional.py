@@ -7,10 +7,6 @@ import pytest
 def driver():
 	return webdriver.Chrome()
 
-# @pytest.fixture(scope='module')
-# def close_driver(driver):
-# 	driver.close()
-
 def test_home_page(driver):
 	driver.get('http://localhost:8000')
 	# assert 'Django' in driver.title
@@ -20,18 +16,15 @@ def test_home_page(driver):
 		assert 'To-Do' in header.text
 
 		input_box = driver.find_element_by_id("id_new_item")
-		print(input_box.get_attribute('placeholder'))
 		assert input_box.get_attribute('placeholder') == 'Enter a to-do item'
 
-		input_box.send_keys("Buy peocock feather")
+		input_box.send_keys("Buy peocock feathers")
 		input_box.send_keys(Keys.ENTER)
 		time.sleep(2)
 
 		table = driver.find_element_by_id("id_list_table")
-		rows = table.find_element_by_tag_name('tr')
-		assert any(rows.text == '1: Buy peacock feathers' for row in rows) == True
-
-		self.fail("Finish the test!")
+		rows = table.find_elements_by_tag_name('tr')
+		assert '1: Buy peocock feathers' in [row.text.strip() for row in rows]
 	finally:
 		driver.close()
 
