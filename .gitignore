@@ -1,0 +1,4 @@
+*.pyc
+venv_dj_tdd
+.pytest_cache
+__pycache__
