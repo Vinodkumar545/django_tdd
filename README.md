@@ -33,10 +33,10 @@ Pre-requiste before we start
 
     * For terrasact OCR Engine: Inputs are images, but the output can be text/pdf files
 
-            | Input | Output |
-            | :---: | :---:  |
-            | .tif or .png | .txt |
-            | .tif or .png | .pdf |
+            | Left-aligned | Center-aligned | Right-aligned |
+            | :---         |     :---:      |          ---: |
+            | git status   | git status     | git status    |
+            | git diff     | git diff       | git diff      |
 
     * For ocrmypdf OCR Engine: Inputs are PDFs, but the output can be text/pdf files
 
