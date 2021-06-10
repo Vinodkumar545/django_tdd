@@ -1,6 +1,6 @@
 atomicwrites==1.1.5
 attrs==18.1.0
-Django==1.11.15
+Django==2.2.24
 funcsigs==1.0.2
 more-itertools==4.3.0
 pathlib2==2.3.2
